@@ -1,0 +1,128 @@
+img.back, img.front{
+    border: double hsl(346, 64%, 92%) 10px;    
+}
+
+#gametop{
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content:space-around;
+}
+
+.scoreboard{
+    padding:20px;
+    background-color: brown;
+    font-size : 25px;
+    font-weight: bolder;
+    color: whitesmoke
+
+
+}
+
+#button button{
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(184, 63, 7);
+    font-size : 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+
+#flipnr{
+    margin-left:500px;
+}
+
+#app{
+    background-color: rgb(19, 5, 1);
+}
+
+.turn{
+    font-size : 35px;
+    font-weight: bolder;
+    margin-top: 20px;
+    color:White;
+    visibility: visible;
+}
+
+#start button{ 
+    border-radius: 30px;
+    color: whitesmoke;
+    width: 400px;
+    font-size: xx-large;
+    font-weight: bolder;   
+    margin-top: 50px;
+    height:100px;
+    background-color: rgb(25, 67, 70);
+}
+
+#start{
+    margin: auto;
+    margin-top: 100px;
+    width: 60%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #57262679;
+    margin: auto;
+}
+
+div#game .flip-card{
+    width:150px;
+    height: 200PX;
+    perspective: 1000px;
+    margin:10px;
+    
+}
+
+.flip-card-inner {
+    position: relative;
+    width:100px;
+    height: 150px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    margin:30Px;   
+}
+
+.flip-card-restart {
+    position: relative;
+    width:100px;
+    height: 150px;
+    transition: transform 0.0s;
+    transform-style: preserve-3d;
+    margin:30Px;
+    
+}
+
+
+.flip-card.flipped .flip-card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+  }
+
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .paired {
+      visibility: hidden;
+  }
+
+  .hidden{
+      visibility: hidden;
+  }

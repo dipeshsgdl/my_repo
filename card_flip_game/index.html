@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <script src="https://unpkg.com/vue@3.0.5/dist/vue.global.js"></script>
+    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <div id ="app">
+        <div id="start"><button onclick="hide;">Start New Game</button></div>
+            <span id="gametop" class="scoreboard">
+                <span>
+                    Scores: 
+                </span> 
+                <span> 
+                    Player 1: {{player1points}}
+                </span> 
+                <span> 
+                    Player 2: {{player2points}}
+                </span> 
+            </span>
+            <div id="gametop">
+                 <span class="scoreboard">
+                     Total Flips: {{flips}}
+                </span>
+                <span>    
+                    <span class="turn" v-bind:class="{'hidden':end}">
+                        {{player1? "Player 1's Turn":"Player 2's Turn"}}
+                    </span>
+                    <p><span class="turn">
+                        {{gameOver}}
+                    </p></span>
+                </span>
+                <span id="button">
+                    <button v-on:click="restart"> 
+                        Start Again 
+                    </button>
+                </span>
+            </div>    
+        
+        </br></br></br>
+            <div id="board">
+            <div id="game" v-for="card in cards">
+                <div class="flip-card" v-bind:class="{'flipped':card.isFlipped, 'paired':card.isPair}" v-on:click="flipCard(card)" id="flipcard1">
+                    <div class="flip-card-inner" v-bind:class="{'flipped':card.isbackFlipped, 'paired':card.isbackPair, 'flip-card-restart':card.restart}" id="flipcard2"> <!-- 'flip-card-restart':card.restart  -->
+                        <div class="flip-card-back"><img class="back" v-bind:src="card.img" width ="150" height="200"></div>
+                        <div class="flip-card-front"><img class="front" src="cardback.png" width="150" height="200"></div>
+                        
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
