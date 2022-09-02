@@ -1,1 +1,1 @@
-# my_repo
+This repo contains my own web applications.
