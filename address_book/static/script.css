@@ -1,0 +1,75 @@
+#newentry input {
+    margin: 5px;
+}
+
+#newentry span{
+    right:10px;
+    margin:10px;
+}
+
+#newentry {
+    border: 10px solid rgb(243, 241, 241);
+    padding: 10px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+label.fixed{
+    display: inline-block;
+    width: 50px;
+    
+}
+
+#searchblock {
+    display: inline-flex;
+    margin:5px;
+}
+
+#searchicon{
+    height:20px;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+#header{
+    display:flex;
+    justify-content: space-between;
+}
+
+#contactlist li{
+    border: solid 2px gray;
+    border-left: solid 10px gray;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+ul#contactlist{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+
+#edit{
+    position:absolute;
+    right: 12px;
+    top: 10px;
+}
+
+.trash{
+    position:absolute;
+    right: 10px;
+    top: 30px;
+}
+
+#settingPanel{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+#settingPanel i{
+    margin: 10px;
+}
