@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login example</title>
+    <title>Login </title>
+    <link rel="stylesheet" href="static/script.css"/>
 </head>
 <body>
-    <h2>Login form</h2>
-    <form action="/login" method="POST">
-        <label>Username: <input type="text" name="username" /></label><br />
-        <label>Password: <input type="password" name="password"></label><br />
-        <input type="submit" value="Login" id="add">
-    </form>
+    <div class="main_content">
+        <h2>Login form</h2>
+        <form action="/login" method="POST">
+            <label>Username: <input type="text" name="username" /></label><br />
+            <label>Password: <input type="password" name="password"></label><br />
+            <input type="submit" value="Login" id="add">
+        </form>
 
-    <h2>Registration form</h2>
-    <form action="/register" method="POST">
-        <label>Username: <input type="text" name="username" /></label><br />
-        <label>Password: <input type="password" name="password"></label><br />
-        <input type="submit" value="Register">
-    </form>
-    <p><small>You can log in using first_guy/first1 or other_guy/other1</small></p>
-
+        <h2>Registration form</h2>
+        <form action="/register" method="POST">
+            <label>Username: <input type="text" name="username" /></label><br />
+            <label>Password: <input type="password" name="password"></label><br />
+            <input type="submit" value="Register">
+        </form>
+        <p><small>You can log in using first_guy/first1 or other_guy/other1</small></p>
+    </div>
 </body>
 </html>
