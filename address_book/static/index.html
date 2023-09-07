@@ -8,66 +8,67 @@
     <script src="static/script.js"></script>
 </head>
 <body>
-    <div id="header">
-        <span id="searchblock">
-            <i><input type="text" name="search" placeholder="Search" id="search"/> </i>
-            <i><img src="static/search.jpg"  id="searchicon"></i>
-            <i><select name="select" id="selected" style="width:100px">
+    <div class="main_content">
+        <div id="header">
+            <span id="searchblock">
+                <i><input type="text" name="search" placeholder="Search" id="search"/> </i>
+                <i><img src="static/search.jpg"  id="searchicon"></i>
+                <i><select name="select" id="selected" style="width:100px">
+                    <option value="email">Email</option>
+                    <option value="name">Name</option>
+                    <option value="tel">Tel</option>
+                    </select>
+                </i>
+                
+            </span>
+            <span id="user_display"></span>
+            <span>
+                <form action="/logout" method="POST">
+                    <button id="logging_out"> logout </button>
+                </form>
+            </span>
+            <span>            
+                <img src="static/plus.png" width="25px" id="addnew">
+                <img src="static/setting.png" width="25px" id="setting">  
+            </span>
+            
+        </div>
+        <div id="settingPanel">
+            <i><select name="select" style="width:100px" id="category">
                 <option value="email">Email</option>
                 <option value="name">Name</option>
                 <option value="tel">Tel</option>
                 </select>
             </i>
-            
-        </span>
-        <span>Hi</span>
-        <span>
-            <form action="/logout" method="POST">
-                <button id="logging_out"> logout </button>
-            </form>
-        </span>
-        <span>            
-            <img src="static/plus.png" width="25px" id="addnew">
-            <img src="static/setting.png" width="25px" id="setting">  
-        </span>
-        
-    </div>
-    <div id="settingPanel">
-        <i><select name="select" style="width:100px" id="category">
-            <option value="email">Email</option>
-            <option value="name">Name</option>
-            <option value="tel">Tel</option>
-            </select>
-        </i>
-        <i> Font-style: <select name="select" style="width:100px" id="font">
-            <option value="serif">Serif</option>
-            <option value="sans-serif">Sans-serif</option>
-            <option value="monospace">Monospace</option>
-            </select>
-        </i>
-        <i> Font size: <input type="number" name="points" size="3" min="2" max="50" step="2" value="16" id="fontsize"> px
-        </i>
-        <i> <input type="submit" value="Go" id="change"> </i>
-    </div>
-    <div id="newentry">
-        <div>
-            <h1>Add entry</h1> <br />
-            <form action="/add_contact" method="POST">
-                <label for="name" class="fixed" >Name:</label><input type="text" name="name" id="name"/> <br />
-                <label for="telephone" class="fixed" >Tel:</label><input type="text" name="tel" id="tel" pattern="[0-9-+( )]*" title="Can only contain numbers, - , + , (), and space"><br/>
-                <label for="emailid" class="fixed" >Email:</label><input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must have a proper email format"> <br/>
-                <input type="submit" value="Add">
-            </form>
+            <i> Font-style: <select name="select" style="width:100px" id="font">
+                <option value="serif">Serif</option>
+                <option value="sans-serif">Sans-serif</option>
+                <option value="monospace">Monospace</option>
+                </select>
+            </i>
+            <i> Font size: <input type="number" name="points" size="3" min="2" max="50" step="2" value="16" id="fontsize"> px
+            </i>
+            <i> <input type="submit" value="Go" id="change"> </i>
         </div>
-        <span id="cross">
-            <img src="static/cross.png" width="15px;">
-        </span>
+        <div id="newentry">
+            <div>
+                <h1>Add entry</h1> <br />
+                <form action="/add_contact" method="POST">
+                    <label for="name" class="fixed" >Name:</label><input type="text" name="name" id="name"/> <br />
+                    <label for="telephone" class="fixed" >Tel:</label><input type="text" name="tel" id="tel" pattern="[0-9-+( )]*" title="Can only contain numbers, - , + , (), and space"><br/>
+                    <label for="emailid" class="fixed" >Email:</label><input type="text" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must have a proper email format"> <br/>
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+            <span id="cross">
+                <img src="static/cross.png" width="15px;">
+            </span>
+        </div>
+
+        <ul id="contactlist">
+            
+            <!-- inserting entries here-->
+        </ul>
     </div>
-
-    <ul id="contactlist">
-        
-        <!-- inserting entries here-->
-    </ul>
-
 </body>
 </html>

@@ -94,6 +94,16 @@ def index():
     print("session : ", session)
     return app.send_static_file("index.html")
 
+@app.route("/fetch_username")
+def fetch_username():
+    username=session.get("username", None)
+    if username:
+        
+        user = [{"username": username}]
+        print('---------------------------------', user)
+        return jsonify(user)
+    return 'no user logged in'
+
 @app.route("/fetch_contacts")
 def fetch_contacts():
     username=session.get("username", None)
@@ -101,7 +111,7 @@ def fetch_contacts():
     contact_details=get_address_by_username(conn, username)
     #print(contact_details)
     if contact_details:
-    #    print(contact_details)
+        print(contact_details)
         return jsonify(contact_details)
     return "no contacts to display"
 

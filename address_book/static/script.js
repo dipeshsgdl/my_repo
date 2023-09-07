@@ -5,6 +5,7 @@ var contactentry = [];
 
 async function listContacts(){
     console.log("fetch_contacts running")
+    fetch_username();
     let url = "/fetch_contacts";
     let response = await fetch(url)
     if (response.status ==200){
@@ -19,6 +20,17 @@ async function listContacts(){
     }
 }
 
+async function fetch_username(){
+    let url = "/fetch_username";
+    let response = await fetch(url)
+    if (response.status ==200){
+        let reply = await response.json();
+        console.log(reply[0]);
+    let user_display = document.getElementById("user_display");
+    user_display.innerText = 'Hi '+ reply[0]['username'];
+    return 1;
+    }
+}
 
 
 function Entry(firstname, tel, email){

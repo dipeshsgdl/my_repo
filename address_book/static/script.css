@@ -1,3 +1,15 @@
+    
+.main_content {
+    width: 700px;
+    border: 2px solid blue;
+    padding: 5px;
+    background-color: rgb(248, 190, 199);
+}
+
+#user_display{
+    margin-top: 7px;
+}
+
 #newentry input {
     margin: 5px;
 }
