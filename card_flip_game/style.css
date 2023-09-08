@@ -2,6 +2,12 @@ img.back, img.front{
     border: double hsl(346, 64%, 92%) 10px;    
 }
 
+body {
+    background-image: url('background.jpg'); 
+    /* image not my property! taken from https://www.wallpaperflare.com/silver-colored-ring-gold-colored-ring-with-white-text-the-one-ring-wallpaper-hjv/download/1920x1080 */    
+    background-color: rgb(19, 5, 1);
+}
+
 #gametop{
     display:flex;
     flex-wrap: wrap;
@@ -11,10 +17,10 @@ img.back, img.front{
 
 .scoreboard{
     padding:20px;
-    background-color: brown;
+    background-color: rgba(26, 8, 1, 0.856);
     font-size : 25px;
     font-weight: bolder;
-    color: whitesmoke
+    color: #f0adad
 
 
 }
@@ -33,9 +39,6 @@ img.back, img.front{
     margin-left:500px;
 }
 
-#app{
-    background-color: rgb(19, 5, 1);
-}
 
 .turn{
     font-size : 35px;
@@ -47,13 +50,13 @@ img.back, img.front{
 
 #start button{ 
     border-radius: 30px;
-    color: whitesmoke;
+    color: rgb(241, 168, 168);
     width: 400px;
     font-size: xx-large;
     font-weight: bolder;   
-    margin-top: 50px;
+    margin-top: 200px;
     height:100px;
-    background-color: rgb(25, 67, 70);
+    background-color: rgba(25, 67, 70, 0.815);
 }
 
 #start{
