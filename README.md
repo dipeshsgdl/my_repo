@@ -1,4 +1,4 @@
-This repo contains small web applications.    
+This repo contains small applications.    
   
 
 
