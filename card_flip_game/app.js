@@ -25,7 +25,7 @@ var app = Vue.createApp({
             card.isFlipped = false;
             card.isPair = false;
         });
-        for (let i=0; i<this.cards.length-1; i++){
+        for (let i=0; i<this.cards.length; i++){
             var shuffledIndex = Math.floor(Math.random()*(i+1));
             var previousCard = this.cards[shuffledIndex];
             this.cards[shuffledIndex] = this.cards[i];

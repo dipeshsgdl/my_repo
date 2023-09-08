@@ -28,7 +28,7 @@ body {
 #button button{
     width: 200px;
     padding: 10px;
-    background-color: rgb(184, 63, 7);
+    background-color: rgba(241, 211, 197, 0.432);
     font-size : 20px;
     font-weight: bolder;
     border-radius: 10px;

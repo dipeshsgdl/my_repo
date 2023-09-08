@@ -5,5 +5,10 @@ This is a 'Lord Of The Rings' themed card flip game. It is fully frontend based 
 
 
 <img src="../card_flip_game/screenshot.jpg" width="600px" alt="The card game">  
+</br>
+</br></br>
+</br></br>
+</br>
+<img src="../card_flip_game/Screenshot1.png" width="600px" alt="The card game">  
 
   
